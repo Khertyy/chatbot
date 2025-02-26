@@ -1,0 +1,356 @@
+version: "3.1"
+nlu:
+
+# pelaporan form
+# - intent: memulai_pelaporan_kekerasan
+#   examples: |
+#     - Saya ingin melaporkan kekerasan
+#     - Saya ingin melaporkan tindakan kekerasan
+#     - Ada kejadian kekerasan yang perlu dilaporkan
+#     - Tolong bantu saya melaporkan kekerasan
+#     - mo lapor dang
+#     - mo lapor kekerasan
+#     - saya ingin melaporkan kekerasan
+#     - hii saya ingin melaporkan kekerasan
+#     - hi saya ingin melaporkan kekerasan
+# - intent: inform_pelaporan
+#   examples: |
+#     - Kekerasan yang saya laporkan adalah [fisik](jenis_kekerasan).
+#     - Jenis kekerasannya adalah [seksual](jenis_kekerasan).
+#     - Saya ingin melaporkan kekerasan [verbal](jenis_kekerasan).
+#     - Kejadiannya berlangsung di [halaman rumah](lokasi_kejadian).
+#     - Saya melihat kekerasan terjadi di daerah [manado](lokasi_kejadian).
+#     - Lokasinya adalah [sekolah](lokasi_kejadian), di mana korban diserang.
+#     - Kejadiannya berada di sekitar [rumah](lokasi_kejadian) korban.
+#     - Kronologi kejadian adalah [pelaku memukul korban di pasar](kronologi).
+#     - Saya melihat [pelaku memukul korban di depan rumahnya](kronologi).
+#     - [Pelaku terus mengancam korban di ruang kelas](kronologi).
+#     - [Korban dihina secara verbal oleh tetangganya](kronologi).
+#     - Kejadiannya terjadi pada [15 Januari 2025](tanggal_kejadian).
+#     - Hari kejadian adalah [kemarin](tanggal_kejadian).
+#     - Tanggal kejadiannya adalah [hari Minggu](tanggal_kejadian).
+#     - [Seorang anak dipukul berulang kali oleh pengasuhnya menggunakan tongkat di rumahnya pada malam hari](kronologi).
+#     - [Korban mengalami pelecehan oleh tetangga saat sedang bermain di halaman rumahnya](kronologi).
+#     - Saya ingin melaporkan anak yang mengalami kekerasan di [manado](lokasi_kejadian).
+#     - Saya ingin melaporkan kekerasan di daerah [perumahan](lokasi_kejadian).
+#     - [Anak itu terus dimaki-maki oleh ayahnya di rumahnya](kronologi).
+#     - [Korban terus-menerus dihina dan dimarahi oleh gurunya di kelas](kronologi).
+#     - saya ingin melaporkan kekerasan yang terjadi di [manado](lokasi_kejadian)
+#     - jenis kekerasan [fisik][{"entity": "jenis_kekerasan"}, {"entity": "jenis_kekerasan"}], terjadi di [manado](lokasi_kejadian)
+#     - lokasinya berada di [manado](lokasi_kejadian)
+#     - [kemarin](tanggal_kejadian)
+#     - [2025-06-13](tanggal_kejadian)
+# - intent: inform_korban
+#   examples: |
+#     - Nama korban adalah [Adi](nama_korban)
+#     - Korbannya bernama [Siti](nama_korban)
+#     - [Joko](nama_korban) adalah korban
+#     - Nama korban [Maya](nama_korban)
+#     - Korban bernama [Budi](nama_korban)
+#     - Usia korban [12](age_korban) tahun
+#     - Korban berusia [11](age_korban) tahun
+#     - [085341635576](kontak_korban)
+#     - Korban adalah [laki-laki](jenis_kelamin)
+#     - Korbannya [perempuan](jenis_kelamin)
+#     - Korban seorang [wanita](jenis_kelamin)
+#     - Korban menggunakan [kacamata](deskripsi_korban)
+#     - Kontak korban adalah [08123456789](kontak_korban).
+#     - Nomor telepon korban [+628123456789](kontak_korban).
+#     - Anda dapat menghubungi korban di [email_korban@example.com](kontak_korban).
+#     - Nomor ponsel korban adalah [082198765432](kontak_korban).
+#     - Kontaknya adalah [kontak_sosial_korban](kontak_korban)
+#     - korban berusia [12](age_korban) tahun, bernama theo
+#     - korban bernama [theo](nama_korban)
+#     - Korban adalah seorang perempuan yang mengalami kekerasan fisik
+#     - Korban seorang pria berusia 35 tahun
+#     - Korban adalah seorang anak perempuan berusia 10 tahun
+#     - Korban bernama [Andi](deskripsi_korban) mengalami pelecehan verbal
+#     - [Seorang wanita](deskripsi_korban) berusia 25 tahun menjadi korban kekerasan
+# - intent: inform_pelaku
+#   examples: |
+#     - Nama pelaku adalah [Andi](nama_pelaku)
+#     - Pelakunya bernama [Doni](nama_pelaku)
+#     - [Santi](nama_pelaku) adalah pelaku
+#     - Nama pelaku [Rudi](nama_pelaku)
+#     - Pelaku adalah [laki-laki](jenis_kelamin)
+#     - pelakunya [perempuan](jenis_kelamin)
+#     - pelaku seorang [pria](jenis_kelamin)
+#     - pelaku memiliki [bekas luka](deskripsi_pelaku) di kaki kanan
+#     - Pelaku adalah seorang pria berusia 40 tahun
+#     - Pelaku bernama [Budi](deskripsi_pelaku) tinggal di Jakarta
+#     - [Seorang pria](deskripsi_pelaku) yang bekerja sebagai sopir
+#     - Pelaku memiliki hubungan keluarga dengan korban
+#     - Pelaku seorang karyawan kantor
+# - intent: inform_pelapor
+#   examples: |
+#     - [0833441635576](kontak_pelapor)
+#     - whatsapp saya [0891893838392](kontak_pelapor)
+#     - Nama saya adalah [Rina](nama_pelapor)
+#     - Pelapor bernama [Rudi](nama_pelapor)
+#     - Saya adalah [ayah](hubungan_dengan_korban) korban
+#     - Hubungan pelaku dengan korban adalah [orang tua](hubungan_dengan_korban).
+#     - Hubungan pelaku adalah [teman](hubungan_dengan_korban).
+#     - Pelaku merupakan [guru](hubungan_dengan_korban) korban.
+#     - [Saudara](hubungan_dengan_korban) korban melakukan kekerasan.
+#     - Hubungannya adalah [lainnya](hubungan_dengan_korban).
+
+# salam
+- intent: salam
+  examples: |
+    - Halo
+    - Hi
+    - Hai
+    - Selamat pagi
+    - Selamat siang
+    - Selamat sore
+    - Selamat malam
+    - Apa kabar?
+    - hi
+- intent: goodbye
+  examples: |
+    - Selamat tinggal
+    - Sampai jumpa
+    - Dadah
+    - Terima kasih, sampai ketemu lagi
+
+# menanyakan ini siapa
+- intent: bot_challenge
+  examples: |
+    - Apakah kamu bot?
+    - Kamu manusia atau robot?
+    - Apakah ini chatbot?
+
+# pertanyaan untuk informasi umum mengenai dp3a
+- intent: tanya_dp3a
+  examples: |
+    - Apa itu DP3A Sulawesi Utara?
+    - Bisa jelaskan tentang DP3A Sulawesi Utara?
+    - Apa kepanjangan dari DP3A?
+    - Apa itu Dinas Pemberdayaan Perempuan dan Perlindungan Anak?
+    - 
+- intent: tugas_dp3a
+  examples: |
+    - Apa tugas utama DP3A?
+    - Apa saja yang dilakukan oleh DP3A?
+    - DP3A bertanggung jawab atas apa saja?
+    - Apa peran DP3A di masyarakat?
+- intent: akses_layanan_dp3a
+  examples: |
+    - Siapa saja yang dapat mengakses layanan DP3A?
+    - Apakah layanan DP3A terbuka untuk umum?
+    - Saya ingin mengakses layanan DP3A, apakah bisa?
+    - Apakah anak-anak bisa mengakses layanan DP3A?
+- intent: program_dp3a
+  examples: |
+    - Apa saja program yang dijalankan DP3A?
+    - Program apa yang ada di DP3A?
+    - Apakah ada program bantuan dari DP3A?
+    - DP3A punya program untuk siapa saja?
+
+- intent: berita_dp3a
+  examples: |
+    - Bagaimana cara mengetahui berita terbaru dari DP3A?
+    - Di mana saya bisa mendapatkan informasi terbaru dari DP3A?
+    - Apakah DP3A memiliki situs web untuk berita terbaru?
+    - Bagaimana cara mengikuti update DP3A?
+
+
+# informasi mengenai pelayanan dan fasilitas dp3a
+- intent: layanan_dp3a
+  examples: |
+    - Apa saja layanan yang disediakan oleh DP3A?
+    - Layanan apa saja yang tersedia di DP3A?
+    - Apa yang bisa saya dapatkan dari DP3A?
+    - Bisa jelaskan layanan yang ada di DP3A?
+
+- intent: layanan_hukum_dp3a
+  examples: |
+    - Apakah DP3A menyediakan layanan hukum bagi korban kekerasan?
+    - Saya butuh bantuan hukum, apakah DP3A bisa membantu?
+    - Apakah ada pendampingan hukum untuk korban kekerasan?
+    - Bisakah saya mendapatkan bantuan hukum dari DP3A?
+
+- intent: layanan_rehabilitasi_dp3a
+  examples: |
+    - Apakah ada layanan rehabilitasi bagi korban kekerasan?
+    - Bagaimana cara mendapatkan rehabilitasi dari DP3A?
+    - DP3A menyediakan layanan pemulihan untuk korban kekerasan?
+    - Saya butuh rehabilitasi, apakah DP3A bisa membantu?
+
+- intent: layanan_konseling_dp3a
+  examples: |
+    - Bagaimana cara mendapatkan layanan konseling dari DP3A?
+    - Saya ingin berkonsultasi, bagaimana caranya?
+    - Apakah DP3A menyediakan layanan konseling gratis?
+    - Saya butuh konseling, apa yang harus saya lakukan?
+
+- intent: layanan_perlindungan_dp3a
+  examples: |
+    - Apakah DP3A menyediakan layanan perlindungan bagi korban kekerasan?
+    - Bagaimana cara mendapatkan perlindungan dari DP3A?
+    - Jika saya mengalami kekerasan, apakah DP3A bisa melindungi saya?
+    - Apakah ada tempat aman bagi korban kekerasan di DP3A?
+
+
+# pertanyaan mengenai pelaporan kekerasan
+- intent: cara_melapor_kekerasan
+  examples: |
+    - Bagaimana cara melaporkan kasus kekerasan terhadap perempuan dan anak?
+    - Saya ingin melaporkan kekerasan, bagaimana caranya?
+    - Kemana saya harus melaporkan kekerasan terhadap anak?
+    - Apa langkah-langkah untuk melaporkan kasus kekerasan?
+
+- intent: persiapan_melapor_kekerasan
+  examples: |
+    - Apa saja yang perlu disiapkan sebelum melaporkan kasus kekerasan?
+    - Dokumen apa yang dibutuhkan untuk melaporkan kasus kekerasan?
+    - Apa syarat untuk mengajukan laporan kekerasan ke DP3A?
+    - Sebelum melapor, apa yang harus saya siapkan?
+
+- intent: laporan_anonim
+  examples: |
+    - Apakah saya bisa melaporkan kasus kekerasan secara anonim?
+    - Bisakah saya melapor tanpa menyebut identitas?
+    - Saya takut melapor, apakah bisa dilakukan secara rahasia?
+    - Apakah DP3A menerima laporan anonim?
+
+- intent: laporan_luar_daerah
+  examples: |
+    - Apakah saya bisa melaporkan kasus kekerasan yang terjadi di luar daerah Sulawesi Utara?
+    - Saya mengetahui kasus kekerasan di luar Sulawesi Utara, apakah bisa dilaporkan ke DP3A?
+    - Apakah DP3A hanya menangani kasus di Sulawesi Utara?
+    - Jika kasus terjadi di luar provinsi, apakah DP3A bisa membantu?
+
+- intent: waktu_penanganan_laporan
+  examples: |
+    - Berapa lama waktu yang dibutuhkan untuk menangani laporan kekerasan?
+    - Jika saya melapor, kapan laporan saya akan diproses?
+    - Berapa lama waktu respon DP3A terhadap laporan kekerasan?
+    - Kapan saya bisa mendapatkan tindak lanjut setelah melapor?
+
+# identitas dan keamanan pelaku
+- intent: kerahasiaan_pelapor
+  examples: |
+    - Apakah identitas saya sebagai pelapor akan dirahasiakan?
+    - Jika saya melapor, apakah identitas saya aman?
+    - Apakah DP3A menjamin kerahasiaan pelapor?
+    - Bagaimana kebijakan DP3A tentang identitas pelapor?
+
+- intent: melapor_dengan_ancaman
+  examples: |
+    - Bagaimana cara melaporkan jika saya takut mendapat ancaman dari pelaku?
+    - Saya takut melapor karena diancam, apa yang harus saya lakukan?
+    - Jika saya diancam, apakah tetap bisa melapor?
+    - Bagaimana DP3A menangani pelapor yang mendapat ancaman?
+
+- intent: perlindungan_pelapor
+  examples: |
+    - Apakah saya akan mendapatkan perlindungan setelah melaporkan kasus kekerasan?
+    - Jika saya melapor, apakah ada perlindungan untuk saya?
+    - Apakah DP3A memberikan perlindungan kepada pelapor?
+    - Bagaimana perlindungan yang diberikan bagi pelapor?
+
+- intent: saksi_melapor
+  examples: |
+    - Jika saya adalah saksi dari kasus kekerasan, bisakah saya melaporkan?
+    - Saya melihat kasus kekerasan, apakah saya bisa melapor meski bukan korban?
+    - Apakah saksi bisa mengajukan laporan kekerasan?
+    - Bagaimana prosedur pelaporan bagi saksi kasus kekerasan?
+
+- intent: hukuman_pelapor_palsu
+  examples: |
+    - Apakah ada hukuman bagi pelapor yang memberikan informasi palsu?
+    - Bagaimana jika seseorang memberikan laporan palsu ke DP3A?
+    - Apakah ada sanksi untuk laporan palsu?
+    - Jika laporan yang saya buat tidak benar, apakah saya akan dihukum?
+
+# perlindungan anak 
+- intent: definisi_perlindungan_anak
+  examples: |
+    - Apa yang dimaksud dengan perlindungan anak?
+    - Bisa jelaskan apa itu perlindungan anak?
+    - Perlindungan anak itu seperti apa?
+    - Apa arti dari perlindungan anak menurut DP3A?
+
+- intent: jenis_kekerasan_anak
+  examples: |
+    - Apa saja bentuk kekerasan terhadap anak yang perlu dilaporkan?
+    - Kekerasan terhadap anak itu seperti apa?
+    - Apa saja jenis kekerasan anak yang bisa dilaporkan ke DP3A?
+    - Saya ingin tahu bentuk kekerasan terhadap anak yang harus dilaporkan.
+
+- intent: laporan_eksploitasi_anak
+  examples: |
+    - Bagaimana cara melaporkan kasus eksploitasi anak?
+    - Saya mengetahui kasus eksploitasi anak, bagaimana cara melaporkannya?
+    - Dimana saya bisa melaporkan eksploitasi anak?
+    - Apa langkah-langkah melaporkan kasus eksploitasi anak ke DP3A?
+
+- intent: perlindungan_anak_terlantar
+  examples: |
+    - Apakah DP3A memiliki layanan perlindungan bagi anak terlantar?
+    - Bagaimana DP3A menangani anak-anak yang terlantar?
+    - Apakah ada program khusus bagi anak terlantar di DP3A?
+    - Jika saya menemukan anak terlantar, apa yang harus saya lakukan?
+
+- intent: bantuan_kdrt_anak
+  examples: |
+    - Bagaimana DP3A membantu anak yang menjadi korban kekerasan dalam rumah tangga?
+    - Apakah DP3A memiliki program untuk anak korban KDRT?
+    - Jika ada anak mengalami kekerasan di rumah, apakah DP3A bisa membantu?
+    - Bagaimana perlindungan DP3A terhadap anak yang mengalami KDRT?
+
+- intent: kegunaan_website
+  examples: |
+    - Apa kegunaan website ini?
+    - Bagaimana cara menggunakan website ini?
+    - Untuk apa website ini dibuat?
+
+- intent: kontak
+  examples: |
+    - Bagaimana cara menghubungi Anda?
+    - Saya ingin tahu kontak yang bisa dihubungi.
+    
+- intent: pembuat_website
+  examples: |
+    - website dibuat siapa?
+    - developernya siapa?
+    - siapa yang membuat website ini?
+
+- intent: informasi_kekerasan
+  examples: |
+    - Apa itu kekerasan?
+    - Bisa dijelaskan apa itu kekerasan?
+- intent: contoh_kekerasan
+  examples: |
+    - Apa saja contoh kekerasan?
+    - Jenis-jenis kekerasan apa saja yang bisa dilaporkan?
+- intent: undang_undang_perlindungan_anak
+  examples: |
+    - Apa dasar hukum perlindungan anak?
+    - Bagaimana anak dilindungi dengan hukum?
+- intent: anak
+  examples: |
+    - apa itu anak?
+    - anak adalah
+    - apasih itu anak?
+    - usia anak?
+- intent: perlindungan_anak
+  examples: |
+    - Apa itu perlindungan anak?
+    - Kenapa harus ada perlindungan anak?
+
+- intent: tolak
+  examples: |
+    - tidak
+    - enggak mau
+    - jangan
+    - saya tolak
+- intent: terima
+  examples: |
+    - ya
+    - yes
+    - ok
+    - yoo
+    - oke
+

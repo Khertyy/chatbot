@@ -1,0 +1,191 @@
+stories:
+
+- story: Pengguna menyapa bot
+  steps:
+  - intent: salam
+  - action: utter_salam
+
+- story: Pengguna mengucapkan selamat tinggal
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Pengguna menanyakan identitas bot
+  steps:
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+
+- story: Pengguna menanyakan informasi DP3A
+  steps:
+  - intent: tanya_dp3a
+  - action: utter_tanya_dp3a
+
+- story: Pengguna menanyakan tugas DP3A
+  steps:
+  - intent: tugas_dp3a
+  - action: utter_tugas_dp3a
+
+- story: Pengguna menanyakan akses layanan DP3A
+  steps:
+  - intent: akses_layanan_dp3a
+  - action: utter_akses_layanan_dp3a
+
+- story: Pengguna menanyakan program DP3A
+  steps:
+  - intent: program_dp3a
+  - action: utter_program_dp3a
+
+- story: Pengguna ingin tahu berita terbaru dari DP3A
+  steps:
+  - intent: berita_dp3a
+  - action: utter_berita_dp3a
+
+- story: Pengguna menanyakan layanan yang tersedia di DP3A
+  steps:
+  - intent: layanan_dp3a
+  - action: utter_layanan_dp3a
+
+- story: Pengguna menanyakan layanan hukum DP3A
+  steps:
+  - intent: layanan_hukum_dp3a
+  - action: utter_layanan_hukum_dp3a
+
+- story: Pengguna menanyakan layanan rehabilitasi DP3A
+  steps:
+  - intent: layanan_rehabilitasi_dp3a
+  - action: utter_layanan_rehabilitasi_dp3a
+
+- story: Pengguna menanyakan layanan konseling DP3A
+  steps:
+  - intent: layanan_konseling_dp3a
+  - action: utter_layanan_konseling_dp3a
+
+- story: Pengguna menanyakan layanan perlindungan DP3A
+  steps:
+  - intent: layanan_perlindungan_dp3a
+  - action: utter_layanan_perlindungan_dp3a
+
+- story: Pengguna ingin tahu cara melaporkan kekerasan
+  steps:
+  - intent: cara_melapor_kekerasan
+  - action: utter_cara_melapor_kekerasan
+
+- story: Pengguna ingin tahu persiapan melaporkan kekerasan
+  steps:
+  - intent: persiapan_melapor_kekerasan
+  - action: utter_persiapan_melapor_kekerasan
+
+- story: Pengguna ingin tahu apakah bisa melapor secara anonim
+  steps:
+  - intent: laporan_anonim
+  - action: utter_laporan_anonim
+
+- story: Pengguna ingin tahu apakah bisa melapor kasus di luar daerah
+  steps:
+  - intent: laporan_luar_daerah
+  - action: utter_laporan_luar_daerah
+
+- story: Pengguna ingin tahu berapa lama waktu penanganan laporan
+  steps:
+  - intent: waktu_penanganan_laporan
+  - action: utter_waktu_penanganan_laporan
+
+- story: Pengguna menanyakan perlindungan identitas pelapor
+  steps:
+  - intent: kerahasiaan_pelapor
+  - action: utter_kerahasiaan_pelapor
+
+- story: Pengguna takut melapor karena diancam
+  steps:
+  - intent: melapor_dengan_ancaman
+  - action: utter_melapor_dengan_ancaman
+
+- story: Pengguna menanyakan perlindungan untuk pelapor
+  steps:
+  - intent: perlindungan_pelapor
+  - action: utter_perlindungan_pelapor
+
+- story: Pengguna bertanya apakah saksi bisa melapor
+  steps:
+  - intent: saksi_melapor
+  - action: utter_saksi_melapor
+
+- story: Pengguna ingin tahu sanksi untuk pelapor palsu
+  steps:
+  - intent: hukuman_pelapor_palsu
+  - action: utter_hukuman_pelapor_palsu
+
+- story: Pengguna ingin tahu definisi perlindungan anak
+  steps:
+  - intent: definisi_perlindungan_anak
+  - action: utter_definisi_perlindungan_anak
+
+- story: Pengguna bertanya tentang jenis kekerasan anak
+  steps:
+  - intent: jenis_kekerasan_anak
+  - action: utter_jenis_kekerasan_anak
+
+- story: Pengguna bertanya cara melaporkan eksploitasi anak
+  steps:
+  - intent: laporan_eksploitasi_anak
+  - action: utter_laporan_eksploitasi_anak
+
+- story: Pengguna bertanya tentang perlindungan anak terlantar
+  steps:
+  - intent: perlindungan_anak_terlantar
+  - action: utter_perlindungan_anak_terlantar
+
+- story: Pengguna bertanya tentang bantuan bagi anak korban KDRT
+  steps:
+  - intent: bantuan_kdrt_anak
+  - action: utter_bantuan_kdrt_anak
+
+- story: Pengguna bertanya tentang kegunaan website
+  steps:
+  - intent: kegunaan_website
+  - action: utter_kegunaan_website
+
+- story: Pengguna bertanya kontak yang bisa dihubungi
+  steps:
+  - intent: kontak
+  - action: utter_kontak
+
+- story: Pengguna bertanya siapa pembuat website
+  steps:
+  - intent: pembuat_website
+  - action: utter_pembuat_website
+
+- story: Pengguna bertanya tentang informasi kekerasan
+  steps:
+  - intent: informasi_kekerasan
+  - action: utter_informasi_kekerasan
+
+- story: Pengguna bertanya contoh kekerasan
+  steps:
+  - intent: contoh_kekerasan
+  - action: utter_contoh_kekerasan
+
+- story: Pengguna bertanya tentang dasar hukum perlindungan anak
+  steps:
+  - intent: undang_undang_perlindungan_anak
+  - action: utter_undang_undang_perlindungan_anak
+
+- story: Pengguna bertanya tentang definisi anak
+  steps:
+  - intent: anak
+  - action: utter_anak
+
+- story: Pengguna bertanya tentang perlindungan anak
+  steps:
+  - intent: perlindungan_anak
+  - action: utter_perlindungan_anak
+
+- story: Pengguna menolak sesuatu
+  steps:
+  - intent: tolak
+  - action: utter_tolak
+
+- story: Pengguna menerima sesuatu
+  steps:
+  - intent: terima
+  - action: utter_terima

@@ -1,0 +1,201 @@
+intents:
+- akses_layanan_dp3a
+- anak
+- bantuan_hukum_dp3a
+- bantuan_kdrt_anak
+- berita_dp3a
+- bot_challenge
+- cara_melapor_kekerasan
+- contoh_kekerasan
+- definisi_perlindungan_anak
+- dukungan_pengadilan
+- goodbye
+- hukuman_pelapor_palsu
+- inform_korban
+- inform_pelaku
+- inform_pelapor
+- inform_pelaporan
+- informasi_kekerasan
+- jenis_kekerasan_anak
+- kegunaan_website
+- kerahasiaan_pelapor
+- kerjasama_kepolisian
+- kontak
+- laporan_anonim
+- laporan_eksploitasi_anak
+- laporan_luar_daerah
+- laporan_tidak_diproses
+- layanan_dp3a
+- layanan_hukum_dp3a
+- layanan_konseling_dp3a
+- layanan_perlindungan_dp3a
+- layanan_rehabilitasi_dp3a
+- melapor_dengan_ancaman
+- memulai_pelaporan_kekerasan
+- pembuat_website
+- pendampingan_hukum_dp3a
+- perlindungan_anak
+- perlindungan_anak_terlantar
+- perlindungan_pelapor
+- persiapan_melapor_kekerasan
+- program_dp3a
+- saksi_melapor
+- salam
+- tanya_dp3a
+- terima
+- tolak
+- tugas_dp3a
+- undang_undang_perlindungan_anak
+- waktu_penanganan_laporan
+
+responses: 
+  utter_salam:
+    - text: "Halo! Ada yang bisa saya bantu?"
+    - text: "Hai! Bagaimana kabarmu hari ini?"
+    - text: "Selamat datang! Ada yang ingin kamu tanyakan?"
+
+  utter_goodbye:
+    - text: "Sampai jumpa! Jangan ragu untuk kembali jika butuh bantuan."
+    - text: "Terima kasih! Semoga harimu menyenangkan."
+    - text: "Dadah! Jika butuh bantuan lagi, aku ada di sini."
+
+  utter_bot_challenge:
+    - text: "Saya adalah chatbot yang siap membantu Anda."
+    - text: "Saya adalah asisten virtual, bukan manusia."
+    - text: "Ya, saya chatbot! Apa yang bisa saya bantu?"
+      
+  utter_undang_undang_perlindungan_anak:
+    - text: |
+        BERIKUT DASAR HUKUM PERLINDUNGAN ANAK 
+        - Keppres No.36/1990 ttg Pengesahan CRC/KHA UU NO. 23/2002 ttg PA 
+        - UU No.35/2014 ttg Perubahan Atas UU No.23/2002 ttg PA 
+        - Perppu No.1/2016 ttg Perubahan Kedua Atas UU No.23/2002 ttg PA 
+        - UU No.17/2016 ttg Penetapan Perppu menjadi UU UU No.21 Tahun 2007 tentang Pemberantasan Tindak Pidana Perdagangan Orang (PTPPO) 
+        - UU No.23 Tahun 2004 tentang Penghapusan Kekerasan Dalam Rumah Tangga (PKDRT) 
+        - UU NO. 12 TAHUN 2022 TENTANG TINDAK PIDANA KEKERASAN SEKSUAL
+  
+  utter_contoh_kekerasan:
+    - text: |
+        Berikut adalah contoh kekerasan:
+        - Kekerasan fisik merupakan Kekerasan yang menyebabkan luka atau cedera pada tubuh seseorang. 
+          Contoh: Memukul, menendang, atau melukai seseorang dengan benda tajam.
+        - Kekerasan psikis merupakan Kekerasan yang merusak kondisi emosional atau mental seseorang. 
+          Contoh: Menghina, mengancam, atau mempermalukan seseorang secara berulang.
+        - Penelantaran anak ialah tindakan mengabaikan kebutuhan dasar anak sehingga membahayakan kesejahteraan mereka.
+          Contoh: Tidak memberi makanan, tempat tinggal, atau pendidikan yang layak.
+        - Kekerasan seksual merupakan Tindakan yang melibatkan pelecehan atau aktivitas seksual tanpa persetujuan. 
+          Contoh: Pemaksaan hubungan seksual atau eksploitasi dalam bentuk pornografi.
+        - eksploitasi anak merupakan pemanfaatan anak untuk keuntungan pribadi atau ekonomi dalam kondisi yang tidak sesuai usia. 
+          Contoh: Mempekerjakan anak dalam pekerjaan berbahaya atau menjadikannya pengemis.
+        Jika ada yang ingin Anda laporkan, silakan lanjutkan.
+
+  utter_tanya_dp3a:
+    - text: "DP3A adalah Dinas Pemberdayaan Perempuan dan Perlindungan Anak Sulawesi Utara."
+    - text: "DP3A adalah instansi yang fokus pada pemberdayaan perempuan dan perlindungan anak."
+    - text: "DP3A bertugas menangani isu-isu terkait perempuan dan anak di Sulawesi Utara."
+
+  utter_tugas_dp3a:
+    - text: "DP3A memiliki tugas utama dalam pemberdayaan perempuan dan perlindungan anak."
+    - text: "Tugas DP3A meliputi advokasi, bantuan hukum, rehabilitasi, dan edukasi."
+    - text: "DP3A berperan dalam mendukung hak perempuan dan anak di masyarakat."
+
+  utter_akses_layanan_dp3a:
+    - text: "Layanan DP3A dapat diakses oleh semua masyarakat yang membutuhkan."
+    - text: "Setiap individu yang mengalami atau menyaksikan kekerasan dapat mengakses layanan DP3A."
+    - text: "Anak-anak juga dapat mengakses layanan DP3A dengan pendampingan."
+
+  utter_program_dp3a:
+    - text: "DP3A memiliki berbagai program seperti pendampingan hukum, rehabilitasi, dan edukasi."
+    - text: "Program DP3A mencakup perlindungan korban kekerasan dan peningkatan kesejahteraan perempuan."
+    - text: "Ada berbagai program bantuan dari DP3A yang dapat diakses oleh masyarakat."
+
+  utter_berita_dp3a:
+    - text: "Anda bisa mendapatkan informasi terbaru DP3A di website resmi atau media sosial kami."
+    - text: "DP3A sering membagikan berita dan program terbaru melalui platform digital."
+    - text: "Untuk update terbaru, kunjungi situs web DP3A atau hubungi langsung."
+
+  utter_layanan_dp3a:
+    - text: "DP3A menyediakan layanan perlindungan, konseling, dan rehabilitasi bagi korban kekerasan."
+    - text: "Ada berbagai layanan yang tersedia di DP3A, termasuk bantuan hukum dan advokasi."
+    - text: "Silakan hubungi DP3A untuk mendapatkan layanan sesuai kebutuhan Anda."
+
+  utter_layanan_hukum_dp3a:
+    - text: "Ya, DP3A menyediakan layanan hukum bagi korban kekerasan."
+    - text: "Anda dapat meminta bantuan hukum melalui DP3A jika mengalami kekerasan."
+    - text: "Kami memiliki tim hukum yang siap membantu korban kekerasan."
+
+  utter_layanan_rehabilitasi_dp3a:
+    - text: "DP3A memiliki layanan rehabilitasi untuk membantu pemulihan korban kekerasan."
+    - text: "Jika Anda membutuhkan rehabilitasi, DP3A dapat membantu."
+    - text: "Kami menyediakan program pemulihan bagi korban kekerasan."
+
+  utter_layanan_konseling_dp3a:
+    - text: "Anda bisa mendapatkan layanan konseling dari DP3A dengan menghubungi kami."
+    - text: "Kami menyediakan layanan konseling gratis bagi korban kekerasan."
+    - text: "Jika Anda membutuhkan bimbingan, DP3A siap membantu dengan layanan konseling."
+
+  utter_layanan_perlindungan_dp3a:
+    - text: "DP3A menyediakan layanan perlindungan bagi korban kekerasan yang membutuhkan tempat aman."
+    - text: "Kami memiliki program perlindungan bagi korban kekerasan domestik maupun lainnya."
+    - text: "Jika Anda merasa tidak aman, hubungi DP3A untuk mendapatkan perlindungan."
+
+  utter_cara_melapor_kekerasan:
+    - text: "Anda dapat melaporkan kekerasan melalui website DP3A atau datang langsung ke kantor kami."
+    - text: "Laporkan kasus kekerasan dengan menghubungi DP3A melalui hotline kami."
+    - text: "Silakan ajukan laporan kekerasan melalui jalur resmi DP3A untuk mendapatkan bantuan."
+
+  utter_persiapan_melapor_kekerasan:
+    - text: "Sebelum melapor, siapkan bukti dan informasi yang jelas tentang kejadian."
+    - text: "Dokumen yang dibutuhkan dapat berupa identitas korban dan kronologi kejadian."
+    - text: "Pastikan Anda memiliki informasi akurat sebelum mengajukan laporan kekerasan."
+
+  utter_laporan_anonim:
+    - text: "Ya, Anda bisa melaporkan kasus kekerasan secara anonim ke DP3A."
+    - text: "Kami menjaga kerahasiaan identitas pelapor untuk keamanan Anda."
+    - text: "Jika Anda tidak ingin menyebutkan identitas, laporan tetap bisa diproses."
+
+  utter_laporan_luar_daerah:
+    - text: "DP3A menangani kasus di Sulawesi Utara, namun kami bisa membantu mengarahkan laporan ke pihak berwenang di daerah lain."
+    - text: "Jika kasus terjadi di luar daerah, kami bisa membantu menghubungkan dengan instansi terkait."
+    - text: "Kami dapat memberikan arahan jika kasus berada di luar wilayah Sulawesi Utara."
+
+  utter_waktu_penanganan_laporan:
+    - text: "Waktu penanganan laporan tergantung pada kompleksitas kasus, namun kami berusaha secepat mungkin."
+    - text: "Kami akan memproses laporan Anda secepatnya setelah menerima informasi lengkap."
+    - text: "Tindak lanjut biasanya diberikan dalam beberapa hari setelah laporan diterima."
+
+  utter_kegunaan_website:
+    - text: "Website ini dibuat untuk memudahkan pelaporan dan akses informasi tentang DP3A."
+    - text: "Anda bisa menggunakan website ini untuk mencari informasi atau melaporkan kasus kekerasan."
+    - text: "Website ini menyediakan informasi layanan serta akses pengaduan kekerasan."
+
+  utter_kontak:
+    - text: |
+        Jika Anda membutuhkan bantuan lebih lanjut, Anda dapat menghubungi DP3A melalui:
+        - 📞 Telepon: 129  
+        - 📧 Email: pppa_sulut@yahoo.com  
+        - 📍 Alamat: Jalan 17 Agustus, Manado, Sulawesi Utara, Indonesia
+
+  utter_pembuat_website:
+    - text: "Website ini dibuat oleh tim pengembang untuk mendukung layanan DP3A."
+    - text: "Tim teknis kami bertanggung jawab atas pembuatan website ini."
+    - text: "Website ini dikembangkan untuk memudahkan akses informasi dan layanan."
+
+  utter_default:
+    - text: "Maaf, saya tidak memahami pertanyaan Anda. Bisa dijelaskan lebih lanjut?"
+    - text: "Saya kurang mengerti, bisakah Anda mengulangi dengan kata-kata lain?"
+    - text: "Mohon maaf, pertanyaan Anda kurang jelas. Bisa dijelaskan lebih rinci?"
+      
+  utter_saksi_melapor:
+    - text: "Ya, sebagai saksi, Anda dapat melaporkan kasus kekerasan. Silakan kunjungi [Lapor Kekerasan](https://dpppa-sulutprov.support/laporkan) dan isi formulir dengan informasi yang Anda ketahui, seperti jenis kekerasan, lokasi kejadian, serta identitas korban dan pelaku jika tersedia."
+    - text: "Tentu, saksi diperbolehkan untuk melaporkan kasus kekerasan. Anda dapat mengajukan laporan melalui website [Lapor Kekerasan](https://dpppa-sulutprov.support/laporkan) dengan memberikan detail kejadian yang Anda lihat agar dapat ditindaklanjuti."
+    - text: "Anda dapat melaporkan kasus kekerasan meskipun bukan korban. Silakan akses [Lapor Kekerasan](https://dpppa-sulutprov.support/laporkan) dan berikan informasi yang Anda miliki untuk membantu proses penanganan kasus."
+    - text: "Sebagai saksi, Anda bisa melaporkan kekerasan melalui website [Lapor Kekerasan](https://dpppa-sulutprov.support/laporkan). Mohon berikan rincian kejadian, termasuk lokasi, waktu, dan pihak yang terlibat, agar laporan Anda dapat segera ditindaklanjuti."
+      
+actions:
+  - action_restart_chatbot
+  
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+version: '3.1'
